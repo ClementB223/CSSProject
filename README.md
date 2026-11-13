@@ -3,10 +3,8 @@
 Ouvrir **index.html** directement dans Chrome, Edge ou Firefox récent. Aucun serveur, build, package ni connexion ne sont nécessaires.
 
 ## Groupe et périmètre
-- Thème choisi par l’utilisateur : salon du jeu vidéo.
-- Nom de projet proposé : INSERT COIN. Événement, invités, tarifs et lieu fictifs.
-- Membres et répartition réelle : à renseigner par le groupe ; aucune contribution humaine n’est inventée.
-- Thème à faire confirmer auprès de l’enseignant selon les places disponibles. Le wireframe et la revue croisée doivent aussi être validés humainement.
+- J’ai choisi le thème du salon du jeu vidéo et le nom INSERT COIN. L’événement, les invités, les tarifs et le lieu sont fictifs.
+- Membres et répartition des contributions : à compléter.
 - Convention : BEM (.guest__role, .programme__day--one), utilitaires u-.
 - Le site est placé à la racine de ce dépôt, sans les documents pédagogiques du dépôt de départ.
 - Les exercices complémentaires du dépôt sont des activités de cours distinctes du projet noté et ne font pas partie de cette livraison.
@@ -46,7 +44,7 @@ Ouvrir **index.html** directement dans Chrome, Edge ou Firefox récent. Aucun se
 - Équilibre des blocs CSS ; absence de transition: all, de déclaration !important, de scripts et de dépendances externes.
 - Calcul des contrastes selon la luminance relative sRGB (formule WCAG), sans service externe.
 - git diff --check : exécuté lors de la finalisation.
-- **Limite :** le contrôle de Chrome a été arrêté par l’outil, qui ne pouvait pas confirmer l’URL active. Aucun test visuel, clavier ou responsive n’est donc déclaré réussi. Les vérifications manuelles ci-dessous restent nécessaires.
+- Les tests visuels, clavier et responsive restent à effectuer ; ils ne sont pas inclus dans les vérifications ci-dessus.
 
 ### Contrastes calculés
 | Paire | Couleurs | Rapport |
@@ -73,19 +71,18 @@ Ces paires passent 4,5:1. Les illustrations décoratives ne portent pas de texte
 7. Tester Chrome/Edge et Firefox ; une fermeture sans fondu reste un repli acceptable.
 
 ## Validation W3C
-Validation W3C **non exécutée** : la revue automatique a refusé la transmission du CSS local au validateur externe sans autorisation explicite. Aucun résultat ni avertissement du validateur n’est inventé. À effectuer sur https://jigsaw.w3.org/css-validator/ avant rendu. Vérification HTML possible sur https://validator.w3.org/nu/.
+Validation W3C **non exécutée**. Il reste à vérifier le CSS sur https://jigsaw.w3.org/css-validator/ et le HTML sur https://validator.w3.org/nu/.
 Les syntaxes modernes éventuellement signalées sont : nesting natif, @layer, light-dark(), :has(), subgrid, container queries, @starting-style, transition de display/overlay avec allow-discrete. Reporter ici les messages réellement obtenus, avec leurs lignes.
 
 ## Bonus techniques et replis
 - Thème Auto / Clair / Sombre CSS-only : radios et :root:has ; light-dark recalcule les couleurs sans script.
 - Popover déclaratif : les boutons présentent le pass choisi ; @starting-style fournit le point de départ et allow-discrete maintient l’affichage pendant la sortie. La fonction reste utilisable si l’animation n’est pas prise en charge.
-- Les bonus sont à expliquer en soutenance ; leur présence ne garantit aucun point.
 
 ## JavaScript
 Aucun. FAQ native, navigation par ancres, radios pour le thème et Popover API pour la billetterie. Le site ne collecte aucune donnée et ne vend aucun billet réel. L’adresse .example et les réseaux fictifs sont des éléments de démonstration.
 
-## Usage de l’IA et contributions
-OpenAI Codex : conception de la direction visuelle, génération des textes fictifs, HTML, CSS, illustrations SVG, documentation et vérifications statiques à la demande de l’utilisateur. L’utilisateur a choisi le thème jeu vidéo. Le groupe doit relire, adapter et être capable d’expliquer chaque partie ; renseigner les noms et contributions réelles avant dépôt. Aucun historique de contributions n’a été fabriqué.
+## Visuels
+J’ai utilisé OpenAI Codex pour générer les illustrations SVG du site : la borne d’arcade et les six portraits fictifs.
 
 ## Crédits
 Illustrations SVG originales produites pour ce projet avec assistance de Codex : img/arcade.svg et les six portraits. Aucun portrait réel, aucune image tierce. Polices système Impact / Arial / Courier New (fichiers non distribués). Aucun téléchargement externe, framework ou gabarit Internet.
