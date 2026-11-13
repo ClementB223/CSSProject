@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-05",
+  "checks": {
+    "uniqueIds": true,
+    "internalLinks": true,
+    "localAssets": true,
+    "h1": 1,
+    "guests": 6,
+    "programmeSlots": 6,
+    "offers": 3,
+    "faq": 6,
+    "cssBraces": true,
+    "noImportant": true,
+    "noTransitionAll": true,
+    "javaScriptLines": 0,
+    "contrastTextPairs": "all >= 4.5:1"
+  },
+  "browserChecks": "Non réalisés : arrêt du contrôle de Chrome par outil (URL active non confirmée).",
+  "w3c": "Non exécuté"
+}

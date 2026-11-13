@@ -1,0 +1,15 @@
+/* Typographie, éléments natifs et accès clavier. */
+@layer base {
+  body { background: var(--color-bg); color: var(--color-text); font: var(--font-size-body)/1.6 var(--font-body); }
+  :where(h1, h2, h3, h4) { line-height: 1.05; text-wrap: balance; }
+  :where(h1, h2) { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; }
+  h1 { font-size: var(--font-size-hero); }
+  h2 { font-size: var(--font-size-heading); }
+  h3 { font-size: var(--font-size-card); }
+  :where(p, li, dd) { overflow-wrap: anywhere; }
+  a { color: var(--color-link); text-underline-offset: 0.22em; }
+  :is(a, button, summary, input):focus-visible { outline: 3px solid var(--color-focus); outline-offset: 5px; }
+  button { color: inherit; cursor: pointer; }
+  :where(section[id], article[id], footer[id]) { scroll-margin-block-start: var(--space-block); }
+  ::selection { color: var(--color-on-accent); background: var(--color-accent); }
+}

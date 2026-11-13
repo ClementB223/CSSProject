@@ -1,0 +1,60 @@
+/* Deux niveaux : valeurs primitives, puis rôles utilisés par les composants. */
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --ink-950: #17191d;
+    --ink-850: #25282e;
+    --paper-50: #f4f2e9;
+    --paper-0: #ffffff;
+    --gray-600: #53565c;
+    --gray-300: #bfc3cb;
+    --gray-500: #777b83;
+    --acid-400: #e2fa58;
+    --blue-700: #2446dc;
+    --blue-300: #a8b9ff;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-5: 4rem;
+    --radius-1: 0.25rem;
+    --time-1: 180ms;
+    --time-2: 420ms;
+    --curve-out: cubic-bezier(0.22, 1, 0.36, 1);
+    /* Tokens sémantiques : les thèmes partagent les mêmes rôles. */
+    --color-bg: light-dark(var(--paper-50), var(--ink-950));
+    --color-surface: light-dark(var(--paper-0), var(--ink-850));
+    --color-text: light-dark(var(--ink-950), var(--paper-50));
+    --color-muted: light-dark(var(--gray-600), var(--gray-300));
+    --color-line: light-dark(var(--gray-500), var(--gray-500));
+    --color-accent: var(--acid-400);
+    --color-on-accent: var(--ink-950);
+    --color-link: light-dark(var(--blue-700), var(--blue-300));
+    --color-focus: light-dark(var(--blue-700), var(--acid-400));
+    --color-stage: var(--blue-700);
+    --color-on-stage: var(--paper-0);
+    --color-shadow: rgb(0 0 0 / 0.15);
+    --space-inline: var(--space-2);
+    --space-gap: var(--space-3);
+    --space-card: var(--space-3);
+    --space-small: var(--space-1);
+    --space-block: var(--space-4);
+    --space-section: clamp(3.5rem, 7vw, 6.5rem);
+    --radius-card: var(--radius-1);
+    --duration-fast: var(--time-1);
+    --duration-enter: var(--time-2);
+    --ease-out: var(--curve-out);
+    --font-body: Arial, Helvetica, sans-serif;
+    --font-display: Impact, 'Arial Narrow', sans-serif;
+    --font-mono: 'Courier New', monospace;
+    --font-size-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+    --font-size-hero: clamp(4.4rem, 13vw, 10rem);
+    --font-size-heading: clamp(2.3rem, 5.4vw, 4.8rem);
+    --font-size-card: clamp(1.4rem, 2.4vw, 1.9rem);
+    --font-size-small: 0.8rem;
+    --width-content: 76rem;
+  }
+  /* Trois choix explicites, sans JS. Le mode Auto conserve la préférence système. */
+  :root:has(#theme-light:checked) { color-scheme: light; }
+  :root:has(#theme-dark:checked) { color-scheme: dark; }
+}

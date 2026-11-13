@@ -1,0 +1,27 @@
+/* Mobile-first ; aucune largeur fixe n'est imposée aux contenus. */
+@layer layout {
+  .wrap { inline-size: min(calc(100% - 2 * var(--space-inline)), var(--width-content)); margin-inline: auto; }
+  .section { padding-block: var(--space-section); }
+  .section-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--space-gap); margin-block-end: var(--space-block); }
+  .section-head p { max-inline-size: 34rem; color: var(--color-muted); }
+  .hero { display: grid; grid-template-areas: "intro" "art" "info"; gap: var(--space-gap); padding-block: var(--space-block); }
+  .hero__intro { grid-area: intro; min-inline-size: 0; }
+  .hero__art { grid-area: art; min-inline-size: 0; }
+  .hero__info { grid-area: info; }
+  .programme { display: grid; grid-template-areas: "heading" "day-one" "day-two"; gap: var(--space-gap); }
+  .programme__heading { grid-area: heading; }
+  .programme__day--one { grid-area: day-one; }
+  .programme__day--two { grid-area: day-two; }
+  .guest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: var(--space-block) var(--space-gap); }
+  /* Les six cartes partagent cinq lignes : image, nom, rôle, bio et lien. */
+  .guest { display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: var(--space-small); min-inline-size: 0; }
+  .offers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: var(--space-gap); }
+  .practical { display: grid; gap: var(--space-block); }
+  .cq-host { container: event / inline-size; min-inline-size: 0; }
+  .cq-host--wide { margin-block-start: var(--space-block); }
+  @media (width >= 48rem) {
+    .hero { grid-template-columns: 1.1fr 1fr; grid-template-areas: "intro art" "info info"; align-items: center; }
+    .programme { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: "heading heading" "day-one day-two"; }
+    .practical { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); align-items: start; }
+  }
+}

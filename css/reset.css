@@ -1,0 +1,9 @@
+/* Reset à spécificité faible, facilement surchargeable. */
+@layer reset {
+  *, *::before, *::after { box-sizing: border-box; }
+  :where(body, h1, h2, h3, h4, p, figure, ul, ol, dd) { margin: 0; }
+  :where(ul[role="list"], ol[role="list"]) { padding: 0; list-style: none; }
+  :where(button, input, select) { font: inherit; }
+  :where(img, svg) { display: block; max-inline-size: 100%; block-size: auto; }
+  :where(button, summary, a) { -webkit-tap-highlight-color: transparent; }
+}
